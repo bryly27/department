@@ -31,7 +31,9 @@
 				console.log('success');
 				$.post("/dei/poll", $(this).serialize(), function(results){
 					console.log(results);
-					$("#response").html("<p class='text-success'>Thank you for signing up.</p>")
+					$("#response").html("<p class='text-success'>Thank you for signing up.</p>");
+					$("#name").val("");
+					$("#email").val("");
 				});
 
 			}else{
