@@ -28,16 +28,13 @@
 			var email = $("#email").val();
 
 			if(name.match(name_regex) && email.match(email_regex)){
-				console.log('success');
 				$.post("/dei/poll", $(this).serialize(), function(results){
 					console.log(results);
 					$("#response").html("<p class='text-success'>Thank you for signing up.</p>");
 					$("#name").val("");
 					$("#email").val("");
 				});
-
 			}else{
-				console.log('error');
 				$("#response").html("<p class='text-danger'>You entered invalid information.</p>")
 			}
 
